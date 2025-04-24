@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Dharavath | Banking Professional Turned Tech Innovator</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .nav-thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            margin: 0 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        h3 {
+            color: #3498db;
+            margin: 20px 0 10px;
+        }
+
+        .education-item, .experience-item, .achievement-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .education-item:last-child, .experience-item:last-child, .achievement-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .item-subtitle {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .item-description {
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #ecf0f1;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .project-highlight {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .project-highlight a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-highlight a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .thumbnail {
+                width: 80px;
+                height: 80px;
+                margin: 0 8px 15px;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Replace with your photo -->
+            <img src="resume.JPG" alt="Profile Photo" class="profile-img">
+            <h1>Avinash D</h1>
+            <p class="tagline">Banking Professional Turned Tech Innovator | Data Enthusiast | AI Prompt Engineer</p>
+        </header>
+
+        <div class="nav-thumbnails">
+            <div class="thumbnail" data-section="about">
+                <img src="aboutme.png" alt="About Me">
+                <div class="label">About Me</div>
+            </div>
+            <div class="thumbnail" data-section="education">
+                <img src="education.png" alt="Education">
+                <div class="label">Education</div>
+            </div>
+            <div class="thumbnail" data-section="career">
+                <img src="career.png" alt="Career">
+                <div class="label">Career</div>
+            </div>
+            <div class="thumbnail" data-section="achievements">
+                <img src="achievement.jpg" alt="Achievements">
+                <div class="label">Achievements</div>
+            </div>
+            <div class="thumbnail" data-section="skills">
+                <img src="skills.jpg" alt="Skills">
+                <div class="label">Skills</div>
+            </div>
+            <div class="thumbnail" data-section="projects">
+                <img src="projects.png" alt="Projects">
+                <div class="label">Projects</div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="content-section active">
+            <h2>About Me</h2>
+            <p>I am a dynamic professional with a unique blend of banking expertise and technological innovation. My journey from being an Assistant Manager at SBI to creating a successful playschool and now venturing into the tech world demonstrates my adaptability and passion for continuous learning.</p>
+            
+            <p>What defines me is my relentless pursuit of knowledge and my determination to see things through to completion. When I set my mind to something, I immerse myself completely until I master it. A perfect example is <strong>balloonpops.org</strong> - built entirely through AI tools without any prior coding experience. This project showcases my ability to leverage emerging technologies to create tangible solutions.</p>
+            
+            <p>With my strong analytical background from banking (credit appraisal, loan sanctioning, accounting) combined with my Computer Science education from NIT Calicut, I bring a unique perspective to data engineering and AI. </p>
+            
+            <p>Currently, I'm expanding my expertise in data engineering, analytics, and AI prompt engineering, eager to apply my problem-solving skills and business acumen in the tech industry.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Technology in Computer Science & Engineering</span>
+                    <span class="item-date">2010 - 2014</span>
+                </div>
+                <div class="item-subtitle">National Institute of Technology Calicut (NITC)</div>
+                <div class="item-description">
+                    <p>Specialized in client-server architectures and database management. Completed a significant project on Client-Server Management System, demonstrating early aptitude for system design and data flow optimization.</p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                
+                <div class="item-subtitle">Ranked 9th in State in PGCET</div>
+            </div>
+        </section>
+
+        <!-- Career Section -->
+        <section id="career" class="content-section">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Founder & Director</span>
+                    <span class="item-date">2025 - Present</span>
+                </div>
+                <div class="item-subtitle">Tech Ventures & Entrepreneurial Pursuits</div>
+                <div class="item-description">
+                    <p>Exploring cutting-edge technologies in data engineering and AI prompt engineering. Developing innovative solutions that bridge business needs with technical implementation.</p>
+                    <ul>
+                        <li>Created balloonpops.org using AI tools without coding background</li>
+                        <li>Developing expertise in data pipelines and analytics</li>
+                        <li>Experimenting with AI-powered business solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Founder & Principal</span>
+                    <span class="item-date">2023 - 2025 (2 years)</span>
+                </div>
+                <div class="item-subtitle">Branwalton Play School, Vanastalipuram</div>
+                <div class="item-description">
+                    <p>Established and successfully operated an educational institution focused on early childhood development, managing all aspects from curriculum design to operations.</p>
+                    <ul>
+                        <li>Developed innovative learning methodologies</li>
+                        <li>Managed staff, finances, and daily operations</li>
+                        <li>Created a nurturing environment for 50+ students</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Assistant Manager</span>
+                    <span class="item-date">Jan 2019 - Nov 2022 (4 years)</span>
+                </div>
+                <div class="item-subtitle">State Bank of India (SBI)</div>
+                <div class="item-description">
+                    <p>Managed critical banking operations with focus on credit appraisal, loan sanctioning, and accounting. Consistently recognized for outstanding performance.</p>
+                    <ul>
+                        <li>Processed and sanctioned loans worth ₹50+ crores annually</li>
+                        <li>Conducted thorough credit risk assessments</li>
+                        <li>Managed business section operations and customer relationships</li>
+                        <li>Streamlined processes improving efficiency by 30%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="content-section">
+            <h2>Achievements & Awards</h2>
+            
+            <div class="achievement-item">
+                <div class="item-header">
+                    <span class="item-title">PGCET State Rank 9</span>
+                    <span class="item-date">2018</span>
+                </div>
+                <div class="item-description">
+                    <p>Achieved 9th rank in the state in Post Graduate Common Entrance Test (PGCET), demonstrating exceptional academic capability.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-item">
+                <div class="item-header">
+                    <span class="item-title">Consistent Top Performer at SBI</span>
+                    <span class="item-date">3years</span>
+                </div>
+                <div class="item-description">
+                    <p>Received GEM (Good Efficient Manager) and AAA ratings for all years of service at SBI, recognizing exceptional performance and leadership.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-item">
+                <div class="item-header">
+                    <span class="item-title">Successful Entrepreneurship</span>
+                    <span class="item-date">2023</span>
+                </div>
+                <div class="item-description">
+                    <p>Transitioned from banking to successfully establish and run a playschool for two years, showcasing adaptability and business acumen.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-item">
+                <div class="item-header">
+                    <span class="item-title">Tech Innovation</span>
+                    <span class="item-date">2025</span>
+                </div>
+                <div class="item-description">
+                    <p>Developed balloonpops.org entirely through AI tools without prior coding experience, demonstrating rapid learning ability and technical aptitude.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+            <h2>Skills & Expertise</h2>
+            
+            <h3>Banking & Financial Expertise</h3>
+            <div class="skills-container">
+                <span class="skill">Credit Appraisal</span>
+                <span class="skill">Loan Sanctioning</span>
+                <span class="skill">Financial Analysis</span>
+                <span class="skill">Risk Assessment</span>
+                <span class="skill">Accounting</span>
+                <span class="skill">Business Operations</span>
+                <span class="skill">Customer Relationship</span>
+            </div>
+            
+            <h3>Technical Skills</h3>
+            <div class="skills-container">
+                <span class="skill">Data Analysis</span>
+                <span class="skill">AI Prompt Engineering</span>
+                <span class="skill">Client-Server Architecture</span>
+                <span class="skill">Database Concepts</span>
+                <span class="skill">No-Code Development</span>
+                <span class="skill">Technical Learning</span>
+            </div>
+            
+            <h3>Business & Management</h3>
+            <div class="skills-container">
+                <span class="skill">Entrepreneurship</span>
+                <span class="skill">Business Development</span>
+                <span class="skill">Operations Management</span>
+                <span class="skill">Strategic Planning</span>
+                <span class="skill">Team Leadership</span>
+            </div>
+            
+            <h3>Core Competencies</h3>
+            <div class="skills-container">
+                <span class="skill">Analytical Thinking</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Rapid Learning</span>
+                <span class="skill">Adaptability</span>
+                <span class="skill">Persistence</span>
+                <span class="skill">Innovation</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <h2>Notable Projects</h2>
+            
+            <div class="project-highlight">
+                <h3>BalloonPops.org</h3>
+                <p>An innovative web application developed entirely using AI tools without any prior coding experience. This project demonstrates my ability to:</p>
+                <ul>
+                    <li>Learn and implement new technologies rapidly</li>
+                    <li>Leverage AI tools to create functional solutions</li>
+                    <li>Persist through challenges to complete projects</li>
+                </ul>
+                <p>Visit: <a href="https://balloonpops.org" target="_blank">balloonpops.org</a></p>
+            </div>
+            
+            <div class="project-highlight">
+                <h3>Client-Server Management System</h3>
+                <p>Developed during my Computer Science education at NIT Calicut, this project involved:</p>
+                <ul>
+                    <li>Designing efficient data flow architectures</li>
+                    <li>Implementing secure communication protocols</li>
+                    <li>Optimizing system performance</li>
+                </ul>
+            </div>
+            
+            <div class="project-highlight">
+                <h3>Banking Process Optimization</h3>
+                <p>At SBI, implemented several process improvements that:</p>
+                <ul>
+                    <li>Reduced loan processing time by 25%</li>
+                    <li>Improved documentation efficiency</li>
+                    <li>Enhanced customer satisfaction metrics</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Avinash.D . All rights reserved.</p>
+        <p>Email: dharavath.avinash12@gmail.com | Phone: (123) 456-7890 | LinkedIn: [Your Profile]</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all thumbnails and content sections
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Add click event to each thumbnail
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const sectionId = this.getAttribute('data-section');
+                    
+                    // Hide all content sections
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    // Show the selected section
+                    document.getElementById(sectionId).classList.add('active');
+                    
+                    // Optional: Scroll to the section
+                    document.getElementById(sectionId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
